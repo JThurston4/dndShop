@@ -4,7 +4,7 @@ const { Routes } = require('discord-api-types/v9');
 
 const token = process.env.TOKEN;
 const clientId = process.env.CLIENTID;
-const guildId = process.env.GUILDID;
+const guildId = ["227468739484844032", "320712012445384714"];
 // const { clientId, guildId, token } = require('./config.json');
 
 const commands = [
