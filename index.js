@@ -1,9 +1,10 @@
 // Require the necessary discord.js classes
 const { Client, Intents } = require('discord.js');
-const { token } = require('./config.json');
+// const { token } = require('./config.json');
 const AsciiTable = require('ascii-table');
 const shopKeeper = require('./shopKeeper');
 
+const token = process.env.TOKEN;
  
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
