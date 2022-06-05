@@ -20,6 +20,34 @@ client.on('interactionCreate', async interaction => {
 
 	const { commandName } = interaction;
 
+	// switch (commandName) {
+	// 	case 'ping': 
+	// 		await interaction.reply('Pong!');
+	// 		break;
+	// 	case 'server':
+	// 		await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`);
+	// 		break;
+	// 	case 'user': 
+	// 		await interaction.reply('User info.');
+	// 		break;
+	// 	case 'shop': 
+	// 		const shop = shopKeeper();
+	// 		var table = new AsciiTable('Shop').setHeading('Name', 'Type', 'Rarity', 'Price');;
+
+	// 		for (let i = 0; i < shop.length; i++) {
+	// 			if (table.toString().length > 2000) {
+	// 				while(table.toString().length >= 2000) {
+	// 					table.__rows.pop();
+	// 				}
+	// 					return await interaction.reply(` \`\`\`${table.toString()}\`\`\` `);
+	// 				}
+	// 			table.addRow(shop[i].name, shop[i].type, shop[i].rarity, shop[i].price)			
+	// 		}
+	// 		await interaction.reply(` \`\`\`${table.toString()}\`\`\` `);
+	// 		break;
+
+	// }
+
 	if (commandName === 'ping') {
 		await interaction.reply('Pong!');
 	} else if (commandName === 'server') {
@@ -40,6 +68,18 @@ client.on('interactionCreate', async interaction => {
 				table.addRow(shop[i].name, shop[i].type, shop[i].rarity, shop[i].price)			
 			}
 				return await interaction.reply(` \`\`\`${table.toString()}\`\`\` `);
+	} else if (commandName === 'd20') {
+		await interaction.reply(Math.ceil(Math.random() * 20 ))
+	} else if (commandName === 'd12') {
+		await interaction.reply(Math.ceil(Math.random() * 12 ))
+	} else if (commandName === 'd10') {
+		await interaction.reply(Math.ceil(Math.random() * 10 ))
+	} else if (commandName === 'd8') {
+		await interaction.reply(Math.ceil(Math.random() * 8 ))
+	} else if (commandName === 'd6') {
+		await interaction.reply(Math.ceil(Math.random() * 6 ))
+	} else if (commandName === 'd4') {
+		await interaction.reply(Math.ceil(Math.random() * 4 ))
 	}
 
 });
